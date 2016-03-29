@@ -1,0 +1,102 @@
+$listing-color: #19191F;
+$highlight-color: #6441A5;
+$text-color: #8C8C9C;
+$online-color: #108010;
+$offline-color: #CCCC00;
+$closed-color: #801010;
+
+body {
+  background-color: #F2F2F2;
+  color: $text-color;
+}
+
+.listing {
+  margin: 20px auto;
+  padding: 20px 0 20px 0;
+  width: 350px;
+  background: $listing-color;
+  border: 3px solid $text-color;
+  border-radius: 20px;
+}
+
+#search-box {
+  margin: 0 25px 0 25px;
+  padding-left: 10px;
+  width: 300px;
+  border: 3px solid $text-color;
+  border-radius: 20px;
+}
+
+.on-focus {
+  border: 3px solid $highlight-color;
+}
+
+.online-status {
+  position: absolute;
+  right: 20px;
+  margin-top: 10px;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+li {
+  position: relative;
+}
+
+.user-item {
+  margin: 20px;
+}
+
+.closed {
+  font-size: 1.3em;
+  color: darken($text-color, 30%);
+  
+  .icon {
+    filter: opacity(50%);
+  }
+  
+  .online-status {
+    color: $closed-color;
+  }
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  border: 3px solid $text-color;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.info {
+  font-size: .5em;
+  color: $text-color;
+  margin: -10px 0 0 55px;
+}
+
+.online {
+  color: $online-color;
+}
+
+
+.offline {
+  color: $offline-color;
+}
+
+
+a, a:hover, a:focus {
+  text-decoration: none;
+  color: $text-color;
+  font-size: 1.3em;
+}
+
+a:hover {
+  color: $highlight-color;
+  
+  .icon {
+    border: 3px solid $highlight-color;
+  }
+}
